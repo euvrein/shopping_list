@@ -4,3 +4,4 @@
 - Enter 'DONE' to stop adding items.
 - Enter 'HELP' for this help.
 - Enter 'SHOW' to see your current list.
+- Enter 'POP' to delete your last added item.
