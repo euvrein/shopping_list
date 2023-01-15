@@ -4,7 +4,9 @@ shopping_list = []
 def welcome_banner():
     print("*" * 20)
     print("Basic Shopping List")
+    print("by Euvrein")
     print("*" * 20)
+    print("")
 
 
 def add_to_list(item):
@@ -30,10 +32,11 @@ def delete_from_list():
 def show_help():
     print("What should we pick up at the store?")
     print("""
-    Enter 'DONE' to stop adding items.
+    Enter an item to add item to the list.
     Enter 'HELP' for this help.
     Enter 'SHOW' to see your current list.
     Enter 'POP' to delete last item.
+    Enter 'DONE' to stop adding items.
     """)
 
 
@@ -41,9 +44,7 @@ def main():
     while True:
         new_item = input("> ")
 
-        if new_item == 'DONE':
-            break
-        elif new_item == 'HELP':
+        if new_item == 'HELP':
             show_help()
             continue  # This shoots you back to while True:
         elif new_item == 'SHOW':
@@ -52,11 +53,14 @@ def main():
         elif new_item == 'POP':
             delete_from_list()
             continue
+        if new_item == 'DONE':
+            break
 
         add_to_list(new_item)
 
 
-welcome_banner()
-show_help()
-main()
-show_list()
+if __name__ == '__main__':
+    welcome_banner()
+    show_help()
+    main()
+    show_list()
